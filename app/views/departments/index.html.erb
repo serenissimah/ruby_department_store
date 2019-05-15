@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<h1>Welcome to DPL's Super Store!</h1>
+</br>
+<h3>Click one of the departments below to view our products:</h3>
+<ul>
+  <% @departments.each do |department| %>
+    <li><%= link_to department.name, department %></li>
+  <% end %>
+</ul>
+<%= link_to 'Create a new department store', new_department_path %>
+<p> Contact us: </p>
+<ul>
+  <li>Phone: (800)-000-0000</li>
+  <li><address>Headquarters: <strong>DPL Corp</strong><br>
+  111 Market Blvd, suite 1000<br>
+  San Paolo, CA 94000<br>
+  </li>
+</ul>
+</html>

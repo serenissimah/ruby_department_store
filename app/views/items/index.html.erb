@@ -1,0 +1,12 @@
+<h1>Click an item to view content</h1>
+<%= link_to 'Create a new item', new_department_item_path(@department) %>
+<table class="table table-striped">
+  <% @items.each do |item| %>
+    <tr>
+      <th>Item name</th>
+      <th>Item price</th>
+    </tr>
+    <td><%= link_to item.name, [@department, item] %></td>
+    <td>$<%= item.price %></td>
+  <% end %>
+<table>
